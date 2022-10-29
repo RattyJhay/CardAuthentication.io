@@ -1,0 +1,222 @@
+:root {
+  --active-input-border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+
+  --input-errors: hsl(0, 100%, 66%);
+
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+  --Font-size: 18px;
+  --Font-family: "Space Grotesk";
+  --Weights: 500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--Font-size);
+  font-family: var(--Font-family);
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr;
+  height: 100vh;
+  position: relative;
+}
+
+.left-div {
+  background-image: url(/images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--White);
+}
+
+.image {
+  position: absolute;
+  top: 15rem;
+  width: 22rem;
+  border-radius: 0.45rem;
+}
+
+.image1 img:nth-child(1) {
+  top: 7rem;
+  left: 14rem;
+  z-index: 1;
+  box-shadow: rgba(33, 9, 47, 0.55) 0px 8px 24px;
+}
+
+.image1 .card-logo {
+  position: absolute;
+  top: 8.4rem;
+  left: 15.5rem;
+  z-index: 2;
+  width: 3.8rem;
+}
+
+.image2 img:nth-child(1) {
+  top: 21rem;
+  left: 20rem;
+  box-shadow: rgba(33, 9, 47, 0.25) 0px 8px 24px;
+}
+
+.text-on-card,
+.security-details-card {
+  z-index: 2;
+  position: fixed;
+}
+
+.security-details-card {
+  transform: translate(9.3rem, -1.5rem);
+}
+
+.text-on-card {
+  top: 15rem;
+  left: 20rem;
+}
+
+.number-on-card {
+  position: fixed;
+  top: 14.3rem;
+  left: 16rem;
+  font-size: 1.4rem;
+  word-spacing: 0.5rem;
+}
+
+.info-on-card {
+  margin-top: 1.8rem;
+}
+
+.info-on-card .name-on-card {
+  margin: 0 4.9rem 0 -4rem;
+  text-transform: uppercase;
+}
+
+.security-details-card {
+  letter-spacing: 0.13rem;
+}
+
+.cvc {
+  position: fixed;
+  top: 26.2rem;
+  left: 37rem;
+  letter-spacing: 0.15rem;
+}
+
+.right-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+form {
+  height: 20rem;
+  width: 25rem;
+  margin-left: 10rem;
+}
+
+.form .input {
+  display: flex;
+}
+
+input[type="text"] {
+  width: 19rem;
+  height: 2.2rem;
+  outline: none;
+  border: 1.5px solid var(--Light-grayish-violet);
+  border-radius: 0.5rem;
+  padding-left: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: var(--Weights);
+  font-family: var(--Font-family);
+  color: var(--Very-dark-violet);
+  box-sizing: border-box;
+  margin: 0.3rem 0rem 1rem 0rem;
+  cursor: pointer;
+}
+
+input[type="text"]:focus {
+  border: 1.9px solid hsl(278, 94%, 30%);
+}
+
+::placeholder {
+  color: var(--Light-grayish-violet);
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: var(--Weights);
+  text-transform: uppercase;
+}
+
+.date-and-Year input[type="text"] {
+  width: 4.5rem;
+}
+
+.verification-code input {
+  width: 8.45rem;
+}
+
+.verification-code,
+.date-and-Year {
+  display: inline-block;
+}
+
+.verification-code {
+  margin-left: 1rem;
+}
+
+button {
+  padding: 0.7rem 7.28rem;
+  margin-top: 1rem;
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+  font-size: var(--Font-size);
+  border-radius: 0.5rem;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+}
+
+.error-message {
+  font-size: 0.9rem;
+  font-weight: var(--Weights);
+  color: var(--input-errors);
+  margin-top: -0.4rem;
+  margin-bottom: 1rem;
+}
+
+.check-out {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.check-out img {
+  width: 4rem;
+}
+
+.check-out-text {
+  text-align: center;
+  margin-top: 2.1rem;
+}
+
+.check-out-text h3 {
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.3rem;
+}
+
+.check-out-text p {
+  font-size: 0.9rem;
+  margin-bottom: 1.3rem;
+  color: var(--Dark-grayish-violet);
+}
